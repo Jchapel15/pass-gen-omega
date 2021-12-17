@@ -4,8 +4,15 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  console.log("Button is clicked")
-  var values = 
+
+  console.log("Button is clicked");
+  //prompt user for password criteria
+  //password length between 8-128
+  //Lowercase, Uppercase, numbers, special characters
+  //Validate the input
+  //Display generated password
+
+  return "Generated password will go here";
 }
 
 // Write password to the #password input
