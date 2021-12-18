@@ -6,7 +6,7 @@ var generateBtn = document.querySelector("#generate");
 const upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 const lowerCase = "abcdefghijklmnopqrstuvwxyz";
 const numbers = "0123456789"
-const symbols = "!@#$%^&*()" 
+const specialChar = "!@#$%^&*()" 
 
 //added userSelection & finalPassword var
 var userSelection = [];
@@ -29,17 +29,39 @@ function generatePassword() {
 
 var upperC = confirm("Would you like Uppercase Letters");
 if (upperC) {
-  userSelection = userSelection.
+  userSelection = userSelection.push(upperCase);
 }
 
-  //prompt user for password criteria 
+var lowerC = confirm("Would you like Lowercase Letters");
+if (lowerC) {
+  userSelection = userSelection.push(lowerCase)
+}
+
+//added remaining specChar and numb var
+var specC = confirm("Would you like and Special Characters");
+if(specC) {
+  userSelection.push(specialChar);
+}
+
+var numb = confirm("Would you like to add Numbers to your password?"); 
+if(numb) { 
+  userSelection.push(numbers);
+}
+
+if (userSelection.length ===0);
+alert("Not enough criteria selected to generate password.")
+generatePassword();
+
+console.log("user selection = " + userSelection);
+
+
+
+  //prompt user for password criteria ****
   //password length between 8-128 ****
-  //Lowercase, Uppercase, numbers, special characters
-  //Validate the input
+  //Lowercase, Uppercase, numbers, special characters ****
+  //Validate the input ****
   //Generate password
   //Display generated password
-
-
   return "Generated password will go here";
 }
 
